@@ -38,5 +38,6 @@ export const router= createBrowserRouter([
             element:<About></About>
         },
         {path:'/contact', element:<Contact></Contact>},
-    ]}
+    ]},
+    {path:'*', element:<div><h1 className="font-bold text-3xl text-center mt-20 text-red-500">Error 404 not found</h1></div>}
 ])
