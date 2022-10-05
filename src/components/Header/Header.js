@@ -11,7 +11,7 @@ const Header = () => {
         {id:1, name:'Contact', path:'/contact'},
     ]
     return (
-        <div className='flex justify-between bg-success md:px-20 py-5 items-center'>
+        <div className='flex justify-between bg-gray-300 md:px-20 py-5 items-center shadow-sm sticky top-0 z-50'>
             <div>
                 <h1 className='font-bold text-3xl'>E-Market</h1>
             </div>
@@ -20,7 +20,7 @@ const Header = () => {
                 open ? <XMarkIcon/> : <Bars3Icon/>
             }
             </div>
-            <div className={`text-center bg-success h-36 md:h-auto w-full md:w-auto md:flex list-none gap-5 text-lg font-semibold absolute md:static duration-500 ease-in ${open ? 'top-16' : 'top-[-130px]'}`}>
+            <div className={`text-center bg-gray-300 h-36 md:h-auto w-full md:w-auto md:flex list-none gap-5 text-lg font-semibold absolute md:static duration-500 ease-in ${open ? 'top-16' : 'top-[-130px]'}`}>
                 {
                     routes.map(route => <Navbar key={route.id} route={route}></Navbar>)
                 }
