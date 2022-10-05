@@ -9,7 +9,13 @@ import Main from "../layout/Main";
 export const router= createBrowserRouter([
     {path:'/', element:<Main></Main>, children:[
         {path:'/', element:<Home></Home>},
-        {path:'/home', element:<Home></Home>},
+        {
+            path:'/home', 
+            loader: async () => {
+                return fetch('https://fakestoreapi.com/products/categories');
+            },
+            element:<Home></Home>
+        },
         {
             path:'/products',
             loader: async () =>{
