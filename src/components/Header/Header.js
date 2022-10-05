@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Navbar from '../Navbar/Navbar';
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid'
+import { Bars3Icon, XMarkIcon, ShoppingBagIcon } from '@heroicons/react/24/solid';
 
 const Header = () => {
     const [open, setOpen] = useState(false);
@@ -8,11 +8,12 @@ const Header = () => {
         {id:1, name:'Home', path:'/home'},
         {id:1, name:'Products', path:'/products'},
         {id:1, name:'About', path:'/about'},
-        {id:1, name:'Contact', path:'/contact'},
+        {id:1, name:'Signup/Login', path:'/contact'},
     ]
     return (
         <div className='flex justify-between bg-gray-300 md:px-20 py-5 items-center shadow-sm sticky top-0 z-50'>
-            <div>
+            <div className='flex items-center gap-1'>
+                <ShoppingBagIcon className="h-8 w-8"/>
                 <h1 className='font-bold text-3xl'>E-Market</h1>
             </div>
             <div onClick={() => setOpen(!open)} className="h-6 w-6 md:hidden">
