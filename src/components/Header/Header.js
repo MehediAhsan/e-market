@@ -8,6 +8,7 @@ const Header = () => {
         {id:1, name:'Home', path:'/home'},
         {id:1, name:'Products', path:'/products'},
         {id:1, name:'About', path:'/about'},
+        {id:1, name:'Cart', path:'/cart'},
         {id:1, name:'Signup/Login', path:'/contact'},
     ]
     return (

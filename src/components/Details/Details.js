@@ -6,10 +6,10 @@ const Details = () => {
     console.log(product);
     const {image,category,price,description,rating,title} = product;
     return (
-        <div className='w-96 mx-auto my-36 md:my-10 bg-slate-100 p-4'>
-            <img src={image} alt="" className='w-80 h-80 mx-auto' />
-            <div className='p-4'>
-                <h1 className='text-2xl font-semibold my-5'>{category}</h1>
+        <div className='md:flex w-[800px] mx-auto max-w-lg md:max-w-none my-36 md:my-20 bg-white p-4 shadow-lg'>
+            <img src={image} alt="" className='w-96 h-96 mx-auto' />
+            <div className='px-8'>
+                <h1 className='text-2xl font-semibold my-5 md:my-0 md:mb-3'>{category}</h1>
                 <p>{description}</p>
                 <div className='mt-5'>
                     <div className='flex gap-4'>
@@ -28,7 +28,8 @@ const Details = () => {
                         <span className='text-lg font-semibold'>Price:</span>
                         <h1>${price}</h1>
                     </div>
-                    
+                    <button className='bg-yellow-400 hover:bg-yellow-500 py-1 px-8 rounded-l-3xl rounded-r-3xl mr-4'>Add to Cart</button>
+                    <button className='bg-orange-400 hover:bg-orange-500 py-1 px-8 rounded-l-3xl rounded-r-3xl'>Buy Now</button>
                 </div>
             </div>
         </div>

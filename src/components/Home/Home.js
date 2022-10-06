@@ -9,7 +9,7 @@ const Home = () => {
         <div>
             <Carousel></Carousel>
             <h1 className='text-3xl font-bold text-center my-20'>Our Latest Collection</h1>
-            <div className='flex flex-col items-center'>
+            <div>
                 {
                     categories.map(category => <Category category={category}></Category>)
                 }
