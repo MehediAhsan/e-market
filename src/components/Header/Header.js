@@ -6,10 +6,9 @@ const Header = () => {
     const [open, setOpen] = useState(false);
     const routes = [
         {id:1, name:'Home', path:'/home'},
-        {id:1, name:'Products', path:'/products'},
-        {id:1, name:'About', path:'/about'},
-        {id:1, name:'Cart', path:'/cart'},
-        {id:1, name:'Signup/Login', path:'/contact'},
+        {id:2, name:'Products', path:'/products'},
+        {id:3, name:'About', path:'/about'},
+        {id:4, name:'Signup/Login', path:'/contact'},
     ]
     return (
         <div className='flex justify-between bg-gray-300 md:px-20 py-5 items-center shadow-sm sticky top-0 z-50'>
@@ -22,7 +21,7 @@ const Header = () => {
                 open ? <XMarkIcon/> : <Bars3Icon/>
             }
             </div>
-            <div className={`text-center bg-gray-300 h-36 md:h-auto w-full md:w-auto md:flex list-none gap-5 text-lg font-semibold absolute md:static duration-500 ease-in ${open ? 'top-16' : 'top-[-130px]'}`}>
+            <div className={`text-center bg-gray-300 h-36 md:h-auto w-full md:w-auto md:flex list-none gap-5 text-lg font-semibold absolute md:static duration-500 ease-in ${open ? 'top-16' : 'top-[-150px]'}`}>
                 {
                     routes.map(route => <Navbar key={route.id} route={route}></Navbar>)
                 }

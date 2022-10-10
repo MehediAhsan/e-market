@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import Collection from '../Collection/Collection';
 
@@ -5,9 +6,11 @@ const Category = ({category}) => {
     const [collections, setCollections] = useState([]);
     
     useEffect(()=>{
-        fetch(`https://fakestoreapi.com/products/category/${category}`)
-        .then(res => res.json())
-        .then(data => setCollections(data))
+        // fetch(`https://fakestoreapi.com/products/category/${category}`)
+        // .then(res => res.json())
+        // .then(data => setCollections(data))
+        axios.get(`https://fakestoreapi.com/products/category/${category}`)
+        .then(data => setCollections(data.data))
     },[category])
     
     return (

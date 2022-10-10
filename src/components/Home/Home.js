@@ -11,7 +11,7 @@ const Home = () => {
             <h1 className='text-3xl font-bold text-center my-20'>Our Latest Collection</h1>
             <div>
                 {
-                    categories.map(category => <Category category={category}></Category>)
+                    categories.map((category,idx) => <Category category={category} key={idx}></Category>)
                 }
             </div>
         </div>

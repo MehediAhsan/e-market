@@ -1,6 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
 import About from "../components/About/About";
-import Cart from "../components/Cart/Cart";
 import Contact from "../components/Contact/Contact";
 import Details from "../components/Details/Details";
 import Home from "../components/Home/Home";
@@ -44,7 +43,6 @@ export const router= createBrowserRouter([
             },
             element:<About></About>
         },
-        {path:'/cart', element:<Cart></Cart>},
         {path:'/contact', element:<Contact></Contact>},
     ]},
     {path:'*', element:<div><h1 className="font-bold text-3xl text-center mt-20 text-red-500">Error 404 not found</h1></div>}
