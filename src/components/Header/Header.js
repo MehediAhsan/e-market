@@ -1,14 +1,17 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import Navbar from '../Navbar/Navbar';
 import { Bars3Icon, XMarkIcon, ShoppingBagIcon } from '@heroicons/react/24/solid';
+import { AuthContext } from '../../contexts/UserContext';
 
 const Header = () => {
+    const {user} = useContext(AuthContext);
     const [open, setOpen] = useState(false);
     const routes = [
         {id:1, name:'Home', path:'/home'},
         {id:2, name:'Products', path:'/products'},
         {id:3, name:'About', path:'/about'},
-        {id:4, name:'Signup/Login', path:'/contact'},
+        {id:4, name:'Login', path:'/login'},
+        {id:5, name:'Signup', path:'/signup'},
     ]
     return (
         <div className='flex justify-between bg-gray-300 md:px-20 py-5 items-center shadow-sm sticky top-0 z-50'>
@@ -25,6 +28,7 @@ const Header = () => {
                 {
                     routes.map(route => <Navbar key={route.id} route={route}></Navbar>)
                 }
+                {user?.name}
             </div>
         </div>
     );

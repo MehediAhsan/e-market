@@ -1,9 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
 import About from "../components/About/About";
-import Contact from "../components/Contact/Contact";
 import Details from "../components/Details/Details";
 import Home from "../components/Home/Home";
+import Login from "../components/Login/Login";
 import Products from "../components/Products/Products";
+import SignUp from "../components/SignUp/SignUp";
 import Main from "../layout/Main";
 
 export const router= createBrowserRouter([
@@ -43,7 +44,14 @@ export const router= createBrowserRouter([
             },
             element:<About></About>
         },
-        {path:'/contact', element:<Contact></Contact>},
+        {
+            path: '/login',
+            element: <Login></Login>
+        },
+        {
+            path: 'signup',
+            element: <SignUp></SignUp>
+        }
     ]},
     {path:'*', element:<div><h1 className="font-bold text-3xl text-center mt-20 text-red-500">Error 404 not found</h1></div>}
 ])
